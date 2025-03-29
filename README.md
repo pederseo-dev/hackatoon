@@ -15,7 +15,9 @@ pear run --dev .
 
 ## instalar dependencias
 npm install hyperswarm hypercore-crypto b4a
+npm install hyperbee hypercore
 
 
-1. nodo inicial consutar a los nodos existentes la historia
+1. modificar el textarea para que los mensajes se vayan agregando en la cola
+en la funcion que muestra los mensajes nuevos tendria que sumar el nuevo mensaje a la cola y borrar el textarea para mostrar la historia hasta donde se llego
 2. 
