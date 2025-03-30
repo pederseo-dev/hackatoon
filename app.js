@@ -76,8 +76,6 @@ async function joinSwarm(topicBuffer) {
   document.querySelector('#chat-room-topic').innerText = topic;
   document.querySelector('#loading').classList.add('hidden');
   document.querySelector('#chat').classList.remove('hidden');
-
-  // Ya no llamamos a loadMessagesFromDB, ya que esto lo maneja sendHistoryToPeer.
 }
 
 // Enviar mensaje
@@ -136,3 +134,44 @@ async function sendHistoryToPeer(peer) {
     peer.write(JSON.stringify(value));
   }
 }
+
+
+
+
+
+
+// import fs from 'fs';
+
+// const guardarDatos = (datos, archivo) => {
+//   fs.writeFileSync(archivo, JSON.stringify(datos, null, 2), 'utf-8');
+//   console.log('Datos guardados correctamente');
+// };
+
+// export { guardarDatos };
+
+
+
+// const extraerDatos = (archivo) => {
+//   try {
+//     const datos = fs.readFileSync(archivo, 'utf-8');
+//     return JSON.parse(datos);
+//   } catch (error) {
+//     console.error('Error al leer el archivo:', error);
+//     return null;
+//   }
+// };
+
+// export { extraerDatos };
+
+
+
+// import { guardarDatos, extraerDatos } from './archivo';
+
+// const datos = { nombre: 'Juan', edad: 30 };
+
+// // Guardar datos
+// guardarDatos(datos, 'data.json');
+
+// // Leer datos
+// const datosLeidos = extraerDatos('data.json');
+// console.log(datosLeidos);
